@@ -42,14 +42,14 @@ const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-bold text-green-700 mb-4">Family-Owned Since 2010</h3>
+            <h3 className="text-2xl font-bold text-green-700 mb-4">A Family Dream Since 2010</h3>
             <p className="text-gray-600 mb-4">
-              FreshMoo Dairy has been providing the highest quality dairy products to our community for over three decades. 
-              What started as a small family farm has grown into a trusted name in natural, wholesome dairy products.
+              FreshMoo Dairy ek chhoti si family se shuru hua tha — jahan humne socha, sabko asli aur shuddh doodh milna chahiye.
+              Dheere-dheere hum apne gaon se sheher tak pahunch gaye, lekin apni imandari aur quality kabhi nahi badli.
             </p>
             <p className="text-gray-600 mb-6">
-              We believe in sustainable farming practices that respect our animals and the environment. 
-              Our cows are pasture-raised and never given artificial growth hormones.
+              Hamare gaay healthy environment mein pali jaati hain, bina kisi chemical ya injection ke. 
+              Humein fakr hai ki hum apne customers tak fresh aur pure doodh pahucha rahe hain — jaise pehle milta tha.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -61,7 +61,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-800">100% Natural</h4>
-                  <p className="text-gray-600 text-sm">No artificial additives or preservatives</p>
+                  <p className="text-gray-600 text-sm">Koi chemical ya preservative nahi</p>
                 </div>
               </div>
               
@@ -73,7 +73,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-800">Farm Fresh</h4>
-                  <p className="text-gray-600 text-sm">Delivered within 24 hours of production</p>
+                  <p className="text-gray-600 text-sm">24 ghante ke andar delivery</p>
                 </div>
               </div>
               
@@ -85,7 +85,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-800">Ethically Raised</h4>
-                  <p className="text-gray-600 text-sm">Happy cows, better milk</p>
+                  <p className="text-gray-600 text-sm">Khush gaay, behtar doodh</p>
                 </div>
               </div>
               
@@ -96,8 +96,8 @@ const About = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-gray-800">Local & Sustainable</h4>
-                  <p className="text-gray-600 text-sm">Supporting our community</p>
+                  <h4 className="font-bold text-gray-800">Locally Made</h4>
+                  <p className="text-gray-600 text-sm">Apne logon ke liye, apne haath se</p>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ const About = () => {
               href="#contact" 
               className="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-6 rounded-full transition-colors"
             >
-              Learn More About Us
+              Know More About Us
             </a>
           </motion.div>
         </div>

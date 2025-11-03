@@ -10,7 +10,7 @@ const Contact = () => {
   })
 
   return (
-    <section id="contact" className="py-20 bg-white" ref={ref}>
+    <section id="contact" className="py-20 bg-gray-50" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center text-green-700 mb-4"
@@ -30,28 +30,29 @@ const Contact = () => {
           Have questions or want to place an order? Reach out to us through any of these channels.
         </motion.p>
         
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex justify-center">
           <motion.div 
-            className="lg:w-1/2"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gray-50 p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-green-700 mb-6">Contact Information</h3>
+            {/* Contact Info */}
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
+              <h3 className="text-2xl font-bold text-green-700 mb-6 text-center">Contact Information</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start">
+                <div className="flex items-start bg-green-50 p-4 rounded-lg">
                   <div className="bg-green-100 p-3 rounded-full mr-4">
                     <FaMapMarkerAlt className="text-green-700" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-800">Our Farm</h4>
-                    <p className="text-gray-600">Lohra, Dist-Nalanda</p>
+                    <p className="text-gray-600">Lohra, Dist-Nalanda, Bihar</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
+                <div className="flex items-start bg-green-50 p-4 rounded-lg">
                   <div className="bg-green-100 p-3 rounded-full mr-4">
                     <FaPhone className="text-green-700" />
                   </div>
@@ -62,17 +63,17 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start bg-green-50 p-4 rounded-lg">
                   <div className="bg-green-100 p-3 rounded-full mr-4">
                     <FaEnvelope className="text-green-700" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-800">Email</h4>
-                    <p className="text-gray-600">info@milkydairy.com</p>
+                    <p className="text-gray-600">aakasheonix@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start bg-green-50 p-4 rounded-lg">
                   <div className="bg-green-100 p-3 rounded-full mr-4">
                     <FaClock className="text-green-700" />
                   </div>
@@ -83,9 +84,12 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
 
-          {/* You can add a second column here (like a form or map) */}
+            {/* Placeholder or Map */}
+            <div className="bg-green-50 p-8 rounded-xl shadow-lg flex items-center justify-center text-gray-600">
+              <p className="text-center">Map or Contact Form can go here</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

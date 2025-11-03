@@ -1,28 +1,27 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 const faqs = [
   {
-    question: 'Where is your farm located?',
-    answer: 'Our farm is located in the fertile valleys of Sonoma County, California, where our cows enjoy open pastures and clean air.'
+    question: 'हमारा फार्म कहाँ स्थित है?',
+    answer: 'हमारा फार्म Lohra, Harnaut (Bihar) में है। यहाँ हमारी गायें खुली चराई में रहती हैं और साफ़ हवा का आनंद लेती हैं।'
   },
   {
-    question: 'Are your products organic?',
-    answer: 'While we follow organic practices, we are not certified organic. We believe in going beyond organic standards with our humane treatment of animals and sustainable farming methods.'
+    question: 'क्या आपके प्रोडक्ट्स ऑर्गेनिक हैं?',
+    answer: 'हम ऑर्गेनिक तरीके अपनाते हैं, लेकिन certified ऑर्गेनिक नहीं हैं। हमारी प्राथमिकता है कि गायों का सही देखभाल हो और खेती sustainable तरीके से हो।'
   },
   {
-    question: 'Do you deliver to my area?',
-    answer: 'We currently deliver within a 50-mile radius of our farm. Enter your zip code on our delivery page to check availability.'
+    question: 'क्या आप मेरे इलाके में डिलीवरी करते हैं?',
+    answer: 'माफ़ कीजिए, फिलहाल हम डिलीवरी नहीं कर पा रहे हैं। आप फार्म से सीधे प्रोडक्ट्स ले सकते हैं।'
   },
   {
-    question: 'How do you ensure milk quality?',
-    answer: 'We maintain strict hygiene standards, regular testing, and rapid cooling of milk immediately after milking to ensure the highest quality and safety.'
+    question: 'दूध की क्वालिटी कैसे सुनिश्चित करते हैं?',
+    answer: 'हम साफ-सफाई और hygiene पर ध्यान रखते हैं। दूध दुहने के तुरंत बाद ठंडा किया जाता है और नियमित testing की जाती है ताकि आप हमेशा fresh और safe milk पाएं।'
   },
   {
-    question: 'Can I visit your farm?',
-    answer: 'Yes! We offer farm tours on select weekends. Please check our events page for upcoming tour dates and booking information.'
+    question: 'क्या मैं फार्म पर आ सकता हूँ?',
+    answer: 'हाँ! आप फार्म पर आ सकते हैं, लेकिन कृपया पहले कॉल करके appointment ले लें। हम आपको दौरे का समय और जानकारी देंगे।'
   }
 ]
 
@@ -46,7 +45,7 @@ const FAQ = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          Frequently Asked Questions
+          अक्सर पूछे जाने वाले सवाल
         </motion.h2>
         
         <motion.p 
@@ -55,7 +54,7 @@ const FAQ = () => {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Have questions? We've got answers. If you don't see your question here, feel free to contact us.
+          आपके सवालों के जवाब यहाँ मिलेंगे। अगर आपका सवाल नहीं दिख रहा है, तो हमें सीधे संपर्क करें।
         </motion.p>
         
         <div ref={ref} className="max-w-3xl mx-auto">

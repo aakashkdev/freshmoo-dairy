@@ -22,7 +22,7 @@ const products = [
     name: 'Homemade Paneer (500g)',
     price: '₹200',
     description: 'Fresh, chemical-free cottage cheese',
-    image:'https://storyofspices.in/wp-content/uploads/2022/03/Homemade_paneer_recipe_story_of_spices--scaled.jpg'
+    image:'https://simpleindianmeals.com/wp-content/uploads/2020/08/Homemade-Paneer-Last-Step.jpg'
   },
   {
     id: 4,
@@ -63,8 +63,8 @@ const products = [
     id: 9,
     name: 'Flavored Milk (Chocolate 250ml)',
     price: '₹40',
-    description: 'Refreshing strawberry flavored milk',
-    image: 'https://www.whitakerschocolates.com/cdn/shop/articles/Chocolate-Ingredients_520x500_c496776e-df9b-4348-a662-5ff65279f5ca.jpg?v=1736771856'
+    description: 'Refreshing chocolate flavored milk',
+    image: 'https://www.gokulmilk.coop/uploads/products/1731327328_1478561188.jpg'
   },
   {
     id: 10,
@@ -96,9 +96,9 @@ const Products = () => {
   })
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-center text-green-700 mb-4"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -106,8 +106,8 @@ const Products = () => {
         >
           Our Dairy Products
         </motion.h2>
-        
-        <motion.p 
+
+        <motion.p
           className="text-center text-gray-600 max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
@@ -115,33 +115,42 @@ const Products = () => {
         >
           Premium quality dairy products made with traditional Indian methods
         </motion.p>
-        
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+        <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
-              className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+              className="bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 relative group"
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10 }}
             >
+              {/* Optional Badge */}
+              <span className="absolute top-3 left-3 bg-orange-500 text-white px-3 py-1 text-xs rounded-full font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                Best Seller
+              </span>
+
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
+                <img
+                  src={product.image}
+                  alt={product.name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
-                <p className="text-orange-500 font-bold text-lg mb-3">{product.price}</p>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <button className="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded-lg transition-colors flex-1 mr-2">
+
+              <div className="p-6 flex flex-col justify-between h-full">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
+                  <p className="bg-gradient-to-r from-orange-400 to-yellow-400 text-transparent bg-clip-text font-bold text-lg mb-3">{product.price}</p>
+                  <p className="text-gray-600 mb-4">{product.description}</p>
+                </div>
+
+                <div className="flex justify-between items-center mt-auto">
+                  <button className="bg-green-700 hover:bg-green-800 text-white py-2 px-4 rounded-lg transition-all shadow-md flex-1 mr-2">
                     Add to Cart
                   </button>
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg transition-colors">
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-lg transition-all shadow-md flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
                       <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />

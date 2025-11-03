@@ -6,24 +6,24 @@ import { FaQuoteLeft } from 'react-icons/fa'
 const testimonials = [
   {
     id: 1,
-    name: 'Sarah Johnson',
-    role: 'Local Chef',
-    content: 'FreshMoo dairy products have transformed my cooking. The quality is unmatched and my customers can taste the difference.',
-    image: 'https://randomuser.me/api/portraits/women/43.jpg'
+    name: 'Neha Kumari',
+    role: 'Home Cook',
+    content: 'FreshMoo ka doodh bahut shuddh aur tasty hai. Main roz ghar mein chai aur sweets banati hoon, sabka taste aur bhi accha lagta hai.',
+    image: 'https://randomuser.me/api/portraits/women/44.jpg'
   },
   {
     id: 2,
-    name: 'Michael Chen',
-    role: 'Health Enthusiast',
-    content: 'As someone who cares about where my food comes from, I trust FreshMoo for their transparency and ethical practices.',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg'
+    name: 'Rohit Kumar',
+    role: 'Fitness Lover',
+    content: 'Main apne health ke liye sirf FreshMoo ka milk peeta hoon. Yeh natural hai aur energy deta hai – bilkul fresh taste!',
+    image: 'https://randomuser.me/api/portraits/men/45.jpg'
   },
   {
     id: 3,
-    name: 'The Patel Family',
-    role: 'Loyal Customers',
-    content: 'We\'ve been buying FreshMoo milk for years. It reminds us of the milk we used to get back in our village in India.',
-    image: 'https://randomuser.me/api/portraits/women/65.jpg'
+    name: 'Jitendra Kumar',
+    role: 'Regular Customers',
+    content: 'Hum saalon se FreshMoo ka doodh le rahe hain. Bachon ko bhi pasand hai aur quality hamesha best milti hai.',
+    image: 'https://randomuser.me/api/portraits/men/52.jpg'
   }
 ]
 
@@ -42,7 +42,7 @@ const Testimonials = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          What Our Customers Say
+          Hamare Customers Kya Kehte Hain
         </motion.h2>
         
         <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8">

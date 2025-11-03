@@ -1,4 +1,6 @@
 # 🌿 FreshMoo Dairy - Farm Fresh Dairy Products
+![FreshMoo Dairy Banner](https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+
 
 > Delivering pure, natural dairy products straight from our farm to your doorstep. FreshMoo Dairy is a family-owned dairy farm dedicated to providing high-quality milk, paneer, ghee, curd, lassi, and more using traditional Indian methods.  
 
